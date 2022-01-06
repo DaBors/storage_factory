@@ -14,7 +14,7 @@ contract StorageFactory is SimpleStorage {
     }
 
     function getStorage(uint256 _simpleStorageIndex) private view returns (SimpleStorage) {
-        return SimpleStorage(address(simpleStorageArray[_simpleStorageIndex]));
+        return simpleStorageArray[_simpleStorageIndex];
     }
 
     function sfStore(uint256 _simpleStorageIndex, uint256 _simpleStorageNumber) public {
